@@ -1,0 +1,51 @@
+###
+POST http://127.0.0.1:8000/register/
+Content-Type: application/json
+
+{
+  "username" : "anoop",
+  "email" : "anoop@gmail.com",
+  "password" : "anoop@123"
+
+}
+
+
+###
+GET http://127.0.0.1:8000/trips/
+Accept: application/json
+Authorization: Basic anoop:anoop@123
+
+
+
+###
+POST http://127.0.0.1:8000/trips/
+Content-Type: application/json
+Authorization: Basic anoop:anoop@123
+
+{
+"title" : "trip to Vagmon",
+"destination" : "Vagmon",
+"start_date" : "2026-11-25"
+}
+
+###
+GET http://127.0.0.1:8000/trips/1/
+Accept: application/json
+Authorization: Basic anoop:anoop@123
+
+
+###
+PUT http://127.0.0.1:8000/trips/1/
+Content-Type: application/json
+Authorization: Basic anoop:anoop@123
+
+{
+"title" : "trip to Vagmon",
+"destination" : "Vagmon",
+"start_date" : "2026-11-22"
+}
+
+###
+DELETE http://127.0.0.1:8000/trips/9/
+Authorization: Basic anju:anju@123
+
